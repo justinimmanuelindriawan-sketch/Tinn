@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@layer components {
+  .btn {
+    @apply px-4 py-2.5 bg-indigo-600 text-white rounded-xl shadow-lg shadow-indigo-200/50 hover:bg-indigo-700 transition inline-flex items-center justify-center gap-2 font-medium text-sm;
+  }
+  .btn-outline {
+    @apply px-4 py-2 border border-white/80 bg-white/60 text-gray-700 rounded-xl hover:bg-white/80 shadow-sm transition inline-flex items-center justify-center gap-2 font-medium backdrop-blur-md text-sm;
+  }
+  .btn-danger {
+    @apply px-4 py-2.5 bg-rose-500 text-white rounded-xl hover:bg-rose-600 shadow-md transition inline-flex items-center justify-center gap-2 font-medium text-sm;
+  }
+  .input {
+    @apply w-full bg-white/60 backdrop-blur-lg border border-white/80 px-4 py-2.5 rounded-2xl shadow-sm focus:ring-2 focus:ring-indigo-400/50 focus:outline-none text-gray-800 text-sm;
+  }
+  .label {
+    @apply block text-[11px] font-bold text-indigo-700/80 mb-1 uppercase tracking-wider;
+  }
+}
+
+/* Custom scrollbar utility for mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media print {
+  html, body, #root, .h-screen, .flex-1, [class*="overflow-"] {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    position: static !important;
+    background: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+  #printable-area, #printable-area *,
+  .printable-container, .printable-container * {
+    visibility: visible;
+  }
+  #printable-area, .printable-container {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    bottom: auto !important;
+    right: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    background: white !important;
+  }
+  ::-webkit-scrollbar {
+    display: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  .print-table th, .print-table td {
+    padding: 1.5px 2px !important;
+    font-size: 8pt !important;
+    line-height: 1.15 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  
+  /* Standard 1-page document fit styling */
+  @page {
+    size: auto; 
+    margin: 5mm 8mm;
+  }
+
+  .print-single-page {
+    page-break-after: avoid !important;
+    page-break-before: avoid !important;
+    page-break-inside: avoid !important;
+    break-after: avoid !important;
+    break-before: avoid !important;
+    break-inside: avoid !important;
+    max-height: 280mm !important;
+    overflow: hidden !important;
+  }
+}

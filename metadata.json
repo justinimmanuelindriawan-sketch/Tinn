@@ -1,0 +1,6 @@
+{
+  "name": "Sistem Informasi Siswa PWA",
+  "description": "Aplikasi manajemen data siswa dengan integrasi Google Sheets & Drive Realtime",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
